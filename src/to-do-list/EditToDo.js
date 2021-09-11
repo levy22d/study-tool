@@ -16,8 +16,8 @@ function EditToDo(props){
     return (
         <form onSubmit={editButtonPressed}>
             <input type="text" value={toDo.task} onChange={handleInput}/>
-            <input type="submit" value="Done"/>
-            <input type="button" value="Cancel" onClick={() => props.setEditing(false)}/>
+            <button type="submit">Done</button>
+            <button onClick={() => props.setEditing(false)}>Cancel</button>
         </form>
     )
 }

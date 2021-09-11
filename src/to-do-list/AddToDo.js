@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { BsPlus } from 'react-icons/bs';
 
 function AddToDo(props){
     const initialValue = { id: null, task: '', completed: false};
@@ -14,9 +15,9 @@ function AddToDo(props){
     }
 
     return (
-        <form onSubmit={addButtonClicked}>
-            <input aria-label="Add a new todo item" type="text" placeholder="Type in your next task..." value={toDo.task} onChange={handleInput}></input>
-            <input type="submit" value="Add"></input>
+        <form className="add-todo" onSubmit={addButtonClicked}>
+            <input className="add-todo-input" aria-label="Add a new todo item" type="text" placeholder="Type in your next task..." value={toDo.task} onChange={handleInput}></input>
+            <button className="add-todo-button" type="submit"><BsPlus/></button>
         </form>
     )
 }
