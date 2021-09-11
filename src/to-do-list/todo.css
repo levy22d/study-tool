@@ -1,5 +1,32 @@
 /*styles for the to-do list component*/
 
+h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.75em;
+    color: #856453;
+    font-family: 'Quicksand', sans-serif;
+}
+
+button{
+    height: 35px;
+    border-radius: 10px;
+    font-size: 1em;
+    line-height: 10px;
+    margin: 0 .25em;
+    max-width: 50px;
+    min-width: 50px;
+}
+
+input[type="text"]{
+    margin-right: 1em;
+    height: 23px;
+    width: 60%;
+    border-radius: 10px;
+    padding: 7px;
+    font-size: 1em;
+}
+
 .todo-list{
     background-color: #f8f1ed;
     display: flex;
@@ -19,17 +46,10 @@
     justify-content: center;
 }
 
-.add-todo-input{
-    margin-right: 1em;
-    height: 23px;
-    width: 60%;
-    border-radius: 10px;
-    padding: 7px;
-}
-
 .add-todo-button {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    min-width: 40px;
+    max-width: 40px;
     border-radius: 100%;
     line-height: .5;
     font-size: large;
@@ -38,9 +58,8 @@
 .list-items {
     display: flex;
     flex-wrap: wrap;
-    /* grid-template-columns: .5fr 5fr 1.5fr 1.5fr;
-    gap: 1em; */
-    margin: 1rem 0;
+    margin: 1em 0;
+    align-items: center;
 }
 
 .list-items-and-title {
@@ -48,13 +67,8 @@
     width: 90%;
 }
 
-.todo-title {
-    text-align: center;
-    font-weight: bold;
-    font-size: 2em;
-    color: #B6244F;
+.todo-title{
     margin: 0 0 1em 0;
-    font-family: 'Roboto Slab', sans-serif;
 }
 
 .todo-item {
@@ -65,20 +79,31 @@
 
 .todo-checkbox{
     flex: 1;
-    height: 100%;
 }
 
 .edit-todo, .delete-todo {
-    height: 35px;
-    border-radius: 10px;
-    font-size: 1em;
-    line-height: 10px;
     flex: 2;
-    margin: 0 .5em;
-    max-width: 50px;
-    min-width: 50px;
 }
 
+.empty-list{
+    text-align: center;
+}
+
+.edit-form{
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    width: 70%;
+    height: 5em;
+}
+
+.edit-input{
+    flex: 3;
+}
+
+.edit-done, .edit-cancel{
+    flex: 1;
+}
 
 
 

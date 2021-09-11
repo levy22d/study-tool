@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { BsCheck, BsX } from 'react-icons/bs';
 
 function EditToDo(props){
     const [toDo, setToDo] = useState(props.currentToDo);
@@ -14,11 +15,14 @@ function EditToDo(props){
     useEffect(() => setToDo(props.currentToDo), [props]);
 
     return (
-        <form onSubmit={editButtonPressed}>
-            <input type="text" value={toDo.task} onChange={handleInput}/>
-            <button type="submit">Done</button>
-            <button onClick={() => props.setEditing(false)}>Cancel</button>
-        </form>
+        <>
+            <h2 className="edit-title">Edit Item</h2>
+            <form className="edit-form" onSubmit={editButtonPressed}>
+                <input className="edit-input" type="text" value={toDo.task} onChange={handleInput}/>
+                <button className="edit-button edit-done" type="submit"><BsCheck/></button>
+                <button className="edit-button edit-cancel" onClick={() => props.setEditing(false)}><BsX/></button>
+            </form>
+        </>
     )
 }
 
