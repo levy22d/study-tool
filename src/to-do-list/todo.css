@@ -81,6 +81,48 @@ input[type="text"]{
     flex: 1;
 }
 
+.red-button {
+    background-color: #FBB7C0;
+    color: #B6244F;
+  }
+  
+.red-button:hover {
+    background-color: #fd8c9b;
+}
+
+.red-button:active {
+    color: #FBB7C0;
+    background-color: #B6244F;
+}
+
+.blue-button {
+    background-color: #85bcc8;
+    color: #33636e;
+  }
+  
+.blue-button:hover {
+    background-color: #64bed3;
+}
+
+.blue-button:active {
+    color: #96BDC6;
+    background-color: #33636e;
+}
+
+.yellow-button {
+    background-color: #fdcf51;
+    color: #956f07;
+  }
+  
+.yellow-button:hover {
+    background-color: #FFBE0B;
+}
+
+.yellow-button:active {
+    color: #fdcf51;
+    background-color: #956f07;
+}
+
 .edit-todo, .delete-todo {
     flex: 2;
 }

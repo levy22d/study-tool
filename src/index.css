@@ -13,30 +13,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-button {
-  background-color: #FBB7C0;
-  color: #B6244F;
+button{
   border: none;
-}
-
-button:hover {
-  background-color: #fd8c9b;
-}
-
-button:active {
-  color: #FBB7C0;
-  background-color: #B6244F;
 }
 
 input[type="text"]{
   font-family: 'Urbanist', sans-serif;
-  border: 1px solid #B6244F;
+  border: 1px solid #DE1A1A;
 }
 
 input[type="text"]:focus{
     outline-style: none;
     box-shadow: none;
-    border-color: #fd8c9b;
-    background-color: #ffeaed;
+    border: 1px dashed #fd8c9b;
+    background-color: #fdffea;
 }
 
