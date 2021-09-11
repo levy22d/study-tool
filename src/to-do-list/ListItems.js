@@ -1,5 +1,8 @@
 import React from 'react';
-import { BsTrash, BsPencil } from 'react-icons/bs';
+import { BsTrash, BsPencil, BsCheck } from 'react-icons/bs';
+import { Checkbox } from 'pretty-checkbox-react';
+
+import '@djthoms/pretty-checkbox';
 
 function ListItems(props){
 
@@ -9,10 +12,14 @@ function ListItems(props){
                 {props.toDos.length > 0 ? (
                     props.toDos.map((toDo) =>
                     <form className="list-items" key={toDo.id}>
-                        <input className="todo-checkbox" type="checkbox" defaultChecked={toDo.completed} checked={props.completed[toDo.id].completed} onChange={ () => {
+                        {/* <input className="todo-checkbox" type="checkbox" defaultChecked={toDo.completed} checked={props.completed[toDo.id].completed} onChange={ () => {
                             props.handleCheck(toDo);
                             props.setCompleted({...props.completed, [toDo.id]: toDo.completed});
-                        }}/>
+                        }}/> */}
+                        <Checkbox icon={<BsCheck className="svg" data-type="svg"/>} className="todo-checkbox" defaultChecked={toDo.completed} checked={props.completed[toDo.id].completed} onChange={ () => {
+                            props.handleCheck(toDo);
+                            props.setCompleted({...props.completed, [toDo.id]: toDo.completed});
+                        }}></Checkbox>
                         <span className="todo-item">{toDo.task}</span>
                         <button className="edit-todo" onClick={() => props.editToDo(toDo)}><BsPencil/></button>
                         <button className="delete-todo" onClick={() => props.deleteToDo(toDo.id)}><BsTrash/></button>

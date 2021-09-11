@@ -41,12 +41,11 @@
     /* grid-template-columns: .5fr 5fr 1.5fr 1.5fr;
     gap: 1em; */
     margin: 1rem 0;
-    
 }
 
 .list-items-and-title {
     margin: 0 0 1.5em 0;
-    width: 100%;
+    width: 90%;
 }
 
 .todo-title {
@@ -58,7 +57,7 @@
     font-family: 'Roboto Slab', sans-serif;
 }
 
-.todo-item{
+.todo-item {
     flex: 5;
     margin: 0 1em;
     word-break: break-all;
@@ -66,6 +65,7 @@
 
 .todo-checkbox{
     flex: 1;
+    height: 100%;
 }
 
 .edit-todo, .delete-todo {
