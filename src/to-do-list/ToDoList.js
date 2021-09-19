@@ -61,7 +61,7 @@ function ToDoList() {
   }
 
   return (
-    <div className="todo-list">
+    <div className="todo-list app-section">
     {editing ? (
       <EditToDo
         setEditing={setEditing}

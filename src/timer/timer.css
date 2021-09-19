@@ -1,0 +1,66 @@
+.timer-title{
+    padding: 2em 0 0 0;
+    color: #617799;
+}
+
+.timer{
+    background-color: #dcdde7;
+}
+
+.timer-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.timer-buttons > button{
+    margin: .5em;
+    max-width: 90px;
+    min-width: 90px;
+    height: 50px;
+}
+
+.timer-buttons > button:hover{
+    background-color: #c7c6c6;
+}
+
+.control-buttons{
+    display: flex;
+    justify-content: center;
+    margin: 1em 0;
+}
+
+.timer-control{
+    min-width: 60px;
+    height: 40px;
+    font-size: 1.3em;
+}
+
+.play-timer{
+    background-color: #94C7BB;
+}
+
+.play-timer:hover{
+    background-color: #6CB2A1;
+}
+
+.reset-timer{
+    background-color: #9495B3;
+}
+
+.reset-timer:hover{
+    background-color: #707199;
+}
+
+.time{
+    font-size: 3.5rem;
+    text-align: center;
+    padding: .3em 0;
+    color: #03254E;
+}
+
+/* add styles for time's up and pause (and there may be more things,
+look through the jsx */
