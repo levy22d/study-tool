@@ -1,0 +1,120 @@
+.timer-title{
+    padding: 2em 0 1em 0;
+    color: #617799;
+}
+
+.timer{
+    background-color: #dcdde7;
+}
+
+.timer-display{
+    display: grid;
+    grid-template-areas: "inc-hour inc-min inc-sec"
+                         "time time time"
+                         "dec-hour dec-min dec-sec";
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-content: center;
+    width: 65%;
+    margin: 0 auto;
+}
+
+.inc-hour{
+    grid-area: inc-hour;
+}
+
+.inc-min{
+    grid-area: inc-min;
+}
+
+.inc-sec{
+    grid-area: inc-sec;
+}
+
+.dec-hour{
+    grid-area: dec-hour;
+}
+
+.dec-min{
+    grid-area: dec-min;
+}
+
+.dec-sec{
+    grid-area: dec-sec;
+}
+
+.time{
+    font-size: 3.5rem;
+    text-align: center;
+    padding: .3em 0;
+    color: #03254E;
+    grid-area: time;
+}
+
+.timer-button{
+    margin: 0 auto;
+}
+
+.empty{
+    padding: 3rem;
+}
+
+.timer-button:hover{
+    background-color: #c7c6c6;
+}
+
+.control-buttons{
+    display: flex;
+    justify-content: center;
+    padding: 3em;
+}
+
+.timer-control{
+    min-width: 60px;
+    height: 40px;
+    font-size: 1.3em;
+}
+
+.play-timer{
+    background-color: #94C7BB;
+}
+
+.play-timer:hover{
+    background-color: #6CB2A1;
+}
+
+.reset-timer{
+    background-color: #9495B3;
+}
+
+.reset-timer:hover{
+    background-color: #707199;
+}
+
+.pause-container{
+    display: flex;
+    justify-content: center;
+    padding: 1em 0 3em 0;
+}
+
+.pause-timer{
+    background-color: #B1D2FC;
+    margin: 0 auto;
+}
+
+.pause-timer:hover{
+    background-color: #75AFFA;
+}
+
+.completed-timer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.times-up{
+    color: #f6335e;
+    font-weight: bold;
+    font-size: 3.5rem;
+    margin: 0 0 2rem 0;
+}
