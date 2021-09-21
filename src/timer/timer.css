@@ -9,49 +9,40 @@
 
 .timer-display{
     display: grid;
-    grid-template-areas: "inc-hour inc-min inc-sec"
+    grid-template-areas: "inc-button inc-button inc-button"
                          "time time time"
-                         "dec-hour dec-min dec-sec";
+                         "dec-button dec-button dec-button";
     grid-template-columns: repeat(3, minmax(0, 1fr));
     justify-content: center;
-    width: 65%;
+    width: 50%;
     margin: 0 auto;
 }
 
-.inc-hour{
-    grid-area: inc-hour;
+.inc-buttons{
+    grid-area: inc-button;
 }
 
-.inc-min{
-    grid-area: inc-min;
+.dec-buttons{
+    grid-area: dec-button;
 }
 
-.inc-sec{
-    grid-area: inc-sec;
-}
-
-.dec-hour{
-    grid-area: dec-hour;
-}
-
-.dec-min{
-    grid-area: dec-min;
-}
-
-.dec-sec{
-    grid-area: dec-sec;
+.change-time-buttons{
+    display: flex;
+    justify-content: space-around;
 }
 
 .time{
     font-size: 3.5rem;
-    text-align: center;
     padding: .3em 0;
     color: #03254E;
+    display: flex;
+    justify-content: space-around;
     grid-area: time;
 }
 
-.timer-button{
-    margin: 0 auto;
+.time > span {
+    flex: 2;
+    text-align: center;
 }
 
 .empty{
