@@ -1,6 +1,7 @@
 import React from 'react';
 import ToDoList from './to-do-list/ToDoList';
 import Timer from './timer/Timer';
+import StudyBreak from './study-break/StudyBreak';
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     <>
       <ToDoList/>
       <Timer/>
+      <StudyBreak/>
     </>
   );
 }
