@@ -49,7 +49,7 @@ function Timer(){
         <div className="timer app-section">
             <h2 className="timer-title">Study Timer</h2>
 
-            <div class={timeRemaining >= 0 ? "timer-display" : "completed-timer"}>
+            <div className={timeRemaining >= 0 ? "timer-display" : "completed-timer"}>
                 {!timerStart && timeRemaining >= 0 && 
                     (<div className="change-time-buttons inc-buttons">
                         <button className="timer-button inc-hour" onClick={() => setTimeRemaining(timeRemaining + 3600)}><BsArrowUp/></button>

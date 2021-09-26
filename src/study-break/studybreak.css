@@ -1,0 +1,50 @@
+.study-break{
+    background-color: #DAFBEB;
+}
+
+.study-title{
+    color: #2C6E49;
+    padding: 2em 0 0 0;
+}
+
+.animal-images{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 3em auto;
+    width: 80%;
+}
+
+.animal-image{
+    width: 40%;
+    border-radius: 30px;
+    max-height: 350px; 
+    object-fit: cover;   
+}
+
+.animal-image:hover{
+    filter: drop-shadow(10px 10px 0 #FB5012);
+    transition: filter .05s ease-in-out;
+}
+
+.generate-images-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+    background-color: #CBBAED;
+    height: 100px;
+}
+
+.generate-images-button{
+    max-width: 50%;
+    min-width: 100px;
+    height: 50%;
+    padding: .5rem;
+    background-color: #FFF647;
+}
+
+.generate-images-button:hover{
+    filter: drop-shadow(10px 10px 0 #FB5012);
+    transition: filter .05s ease-in-out;
+}
