@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin: 3em;
+    margin: 3em auto;
     width: 80%;
 }
 
@@ -26,28 +26,6 @@
     filter: drop-shadow(10px 10px 0 #FB5012);
     transition: filter .05s ease-in-out;
 }
-
-/* 
-.image-wrapper{
-    position: relative;
-    width: 40%;
-} */
-
-/* .image-wrapper:hover .image-text{
-    opacity: 1;
-}
-
-.image-text{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    border-radius: 30px;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.267);
-    opacity: 0;
-    margin: 0;
-} */
 
 .generate-images-buttons{
     display: flex;

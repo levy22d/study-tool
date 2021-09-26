@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import {BsArrowCounterclockwise} from 'react-icons/bs';
 import './studybreak.css';
-import catImage from '../images/IMG_0009.JPG';
+import catDefault from '../images/IMG_0009.JPG';
+import dogDefault from '../images/dog.jpg';
 
 function StudyBreak(){
 
@@ -24,22 +25,6 @@ function StudyBreak(){
         })(); 
     }, [newImagePressed.cat, newImagePressed.dog]);
 
-    // useEffect(()=> {
-    //     fetch("https://aws.random.cat/meow")
-    //     .then(response => response.json())
-    //     .then(result => setImageURLs({...imageURLs, cat: result.file}))
-    //     .catch(/* WHAT SHOULD I DO HERE */);
-    //     console.log(newImagePressed);
-    //     console.log(imageURLs);
-    // }, [newImagePressed.cat])
-
-    // useEffect(()=> {
-    //     fetch("https://random.dog/woof.json")
-    //     .then(response => response.json())
-    //     .then(result => setImageURLs({...imageURLs, dog: result.url}))
-    //     .catch(/* WHAT SHOULD I DO HERE */);
-    // }, [newImagePressed.dog])
-
     const loadNewImages = () => {
         setNewImagePressed({cat: !newImagePressed.cat, dog: !newImagePressed.dog});
     }
@@ -49,8 +34,8 @@ function StudyBreak(){
             <h2 className="study-title">Study Break</h2>
             
             <div className="animal-images">
-                <img className="animal-image" alt="A cute cat" src={imageURLs.cat}/>
-                <img className="animal-image" alt="A cute dog" src={imageURLs.dog}/>                
+                <img className="animal-image" alt="A cute cat" src={imageURLs.cat} onError={(e) => {e.target.onerror = null; e.target.src = catDefault}}/>
+                <img className="animal-image" alt="A cute dog" src={imageURLs.dog} onError={(e) => {e.target.onerror = null; e.target.src = dogDefault}}/>                
             </div>
             <div className="generate-images-buttons">
                 <button className="generate-images-button" onClick={loadNewImages}><BsArrowCounterclockwise/></button>
