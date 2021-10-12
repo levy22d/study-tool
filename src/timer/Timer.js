@@ -1,15 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import {BsPlay, BsArrowCounterclockwise, BsPause, BsArrowUp, BsArrowDown} from 'react-icons/bs';
+import {useAlert} from 'react-alert';
 import './timer.css';
 
 function Timer(){
     const [timeRemaining, setTimeRemaining] = useState(0);
     const [timerStart, setTimerStart] = useState(false);
+    const alert = useAlert();
 
     useEffect(() => {
-        if(timeRemaining < 0){
-            finishAlert();
+        if(timeRemaining < 0){ 
             setTimerStart(false);
+            if(!timerStart){
+                alert.show(<span style={{fontFamily: 'Urbanist'}}>Time's up!</span>);
+            }
             return;
         }
 
@@ -29,13 +33,7 @@ function Timer(){
 
     function resetTimer(){
         setTimeRemaining(0);
-    }
-
-    function finishAlert(){
-        if(timerStart){
-            //so it only runs once
-            alert("Time's up!");
-        }
+        setTimerStart(false);
     }
     
     let hours = Math.floor(timeRemaining / 3600);
@@ -64,10 +62,13 @@ function Timer(){
                  </>}
 
                 {!timerStart &&
-                    (<div className="change-time-buttons dec-buttons">{timeRemaining >= 3600 && 
-                        <button className="timer-button dec-hour" onClick={() => setTimeRemaining(timeRemaining - 3600)}><BsArrowDown/></button>}
-                    {timeRemaining >= 60 && 
-                        <button className="timer-button dec-min" onClick={() => setTimeRemaining(timeRemaining - 60)}><BsArrowDown/></button>}
+                    (<div className="change-time-buttons dec-buttons">
+                    {timeRemaining >= 3600 ? 
+                        <button className="timer-button dec-hour" onClick={() => setTimeRemaining(timeRemaining - 3600)}><BsArrowDown/></button>
+                    : <div className="button-filler"></div>}
+                    {timeRemaining >= 60 ? 
+                        <button className="timer-button dec-min" onClick={() => setTimeRemaining(timeRemaining - 60)}><BsArrowDown/></button>
+                    : <div className="button-filler"></div>}
                     {timeRemaining >= 1 ? 
                         <button className="timer-button dec-sec" onClick={() => setTimeRemaining(timeRemaining - 1)}><BsArrowDown/></button>
                         : <div className="empty"></div>}</div>)}

@@ -49,6 +49,13 @@
     padding: 3rem;
 }
 
+.button-filler{
+    height: 35px;
+    margin: 0 .25em;
+    max-width: 50px;
+    min-width: 50px;
+}
+
 .timer-button:hover{
     background-color: #c7c6c6;
 }
