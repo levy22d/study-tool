@@ -1,0 +1,49 @@
+.nav-title{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.nav-options{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background: rgb(77, 77, 77);
+    z-index: 1;
+}
+
+.icon{
+    object-fit: contain;
+}
+
+.nav-options > span{
+    color: white;
+}
+
+.nav-options > *{
+    flex: 1;
+}
+
+.nav-item{
+    height: 100%;
+    display: inline-block;
+    padding: 1em 0;
+    width: 100%;
+    text-align: center;
+}
+
+.nav-item:hover{
+    background: #ec8fa0;
+    cursor: pointer;
+}
+
+.nav-item:focus{
+    border: 2px dotted #ec8fa0;
+}
+
+.nav-item:active{
+    background: #f0c3cb;
+    color: #ec8fa0;
+}

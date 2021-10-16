@@ -34,3 +34,13 @@ input[type="text"]:focus{
   margin: 1.5em;
 }
 
+/*App.js styles*/
+#page-title{
+  text-align: center;
+  color: #99C24D;
+  font-family: "Antic Slab", sans-serif;
+  font-size: 3em;
+  padding: 0 0 .7em 0;
+  border-bottom: dashed 2px #77973c;
+}
+
