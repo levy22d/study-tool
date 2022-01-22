@@ -47,3 +47,14 @@
     background: #f0c3cb;
     color: #ec8fa0;
 }
+
+@media(max-width: 375px){
+    .nav-options{
+        flex-direction: column;
+        position: static;
+    }
+    .icon{
+        max-height: 20px;
+        padding: 1em 0;
+    }
+}
