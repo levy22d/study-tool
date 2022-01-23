@@ -50,38 +50,38 @@ function Timer(){
             <div className={timeRemaining >= 0 ? "timer-display" : "completed-timer"}>
                 {!timerStart && timeRemaining >= 0 && 
                     (<div className="change-time-buttons inc-buttons">
-                        <button className="timer-button inc-hour" onClick={() => setTimeRemaining(timeRemaining + 3600)}><BsArrowUp/></button>
-                        <button className="timer-button inc-min" onClick={() => setTimeRemaining(timeRemaining + 60)}><BsArrowUp/></button>
-                        <button className="timer-button inc-sec" onClick={() => setTimeRemaining(timeRemaining + 1)}><BsArrowUp/></button>
+                        <button className="timer-button inc-hour" aria-label="increase hours by one" onClick={() => setTimeRemaining(timeRemaining + 3600)}><BsArrowUp/></button>
+                        <button className="timer-button inc-min" aria-label="increase minutes by one" onClick={() => setTimeRemaining(timeRemaining + 60)}><BsArrowUp/></button>
+                        <button className="timer-button inc-sec" aria-label="increase seconds by one" onClick={() => setTimeRemaining(timeRemaining + 1)}><BsArrowUp/></button>
                     </div>)}
                     
                 {timeRemaining >= 0 ? <div className="time"> <span>{hours}</span>:<span>{minutes}</span>:<span>{seconds}</span> </div>
                  : <>
                     <div className="times-up">Time's up!</div>
-                    <button className="reset-timer timer-control" onClick={resetTimer}><BsArrowCounterclockwise/></button>
+                    <button className="reset-timer timer-control" aria-label="reset timer" onClick={resetTimer}><BsArrowCounterclockwise/></button>
                  </>}
 
                 {!timerStart &&
                     (<div className="change-time-buttons dec-buttons">
                     {timeRemaining >= 3600 ? 
-                        <button className="timer-button dec-hour" onClick={() => setTimeRemaining(timeRemaining - 3600)}><BsArrowDown/></button>
+                        <button className="timer-button dec-hour" aria-label="decrease hours by one" onClick={() => setTimeRemaining(timeRemaining - 3600)}><BsArrowDown/></button>
                     : <div className="button-filler"></div>}
                     {timeRemaining >= 60 ? 
-                        <button className="timer-button dec-min" onClick={() => setTimeRemaining(timeRemaining - 60)}><BsArrowDown/></button>
+                        <button className="timer-button dec-min" aria-label="decrease minutes by one" onClick={() => setTimeRemaining(timeRemaining - 60)}><BsArrowDown/></button>
                     : <div className="button-filler"></div>}
                     {timeRemaining >= 1 ? 
-                        <button className="timer-button dec-sec" onClick={() => setTimeRemaining(timeRemaining - 1)}><BsArrowDown/></button>
+                        <button className="timer-button dec-sec" aria-label="decrease seconds by one" onClick={() => setTimeRemaining(timeRemaining - 1)}><BsArrowDown/></button>
                         : <div className="empty"></div>}</div>)}
             </div>
             
             {!timerStart && timeRemaining > 0 && 
                 <div className="control-buttons">
-                    <button className="play-timer timer-control" onClick={() => setTimerStart(true)}><BsPlay/></button>
-                    <button className="reset-timer timer-control" onClick={resetTimer}><BsArrowCounterclockwise/></button>
+                    <button className="play-timer timer-control" aria-label="play timer" onClick={() => setTimerStart(true)}><BsPlay/></button>
+                    <button className="reset-timer timer-control" aria-label="reset timer" onClick={resetTimer}><BsArrowCounterclockwise/></button>
                 </div>
             }
             <div className="pause-container">     
-                {timeRemaining > 0 && timerStart && <button className="pause-timer timer-control" onClick={PauseTimer}><BsPause/></button> }
+                {timeRemaining > 0 && timerStart && <button className="pause-timer timer-control" aria-label="pause timer" onClick={PauseTimer}><BsPause/></button> }
             </div>
 
         </div>

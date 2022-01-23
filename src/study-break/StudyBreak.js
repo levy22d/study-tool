@@ -38,7 +38,7 @@ function StudyBreak(){
                 <img className="animal-image" alt="A cute dog" src={imageURLs.dog} onError={(e) => {e.target.onerror = null; e.target.src = dogDefault}}/>                
             </div>
             <div className="generate-images-buttons">
-                <button className="generate-images-button" onClick={loadNewImages}><BsArrowCounterclockwise/></button>
+                <button className="generate-images-button" aria-label="generate new images" onClick={loadNewImages}><BsArrowCounterclockwise/></button>
             </div>
         </div>
         );

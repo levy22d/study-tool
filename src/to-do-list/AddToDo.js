@@ -17,7 +17,7 @@ function AddToDo(props){
     return (
         <form className="add-todo" onSubmit={addButtonClicked}>
             <input className="add-todo-input" aria-label="Add a new todo item" type="text" placeholder="Type in your next task..." value={toDo.task} onChange={handleInput}></input>
-            <button className="add-todo-button blue-button" type="submit"><BsPlus/></button>
+            <button className="add-todo-button blue-button" aria-label="add" type="submit"><BsPlus/></button>
         </form>
     )
 }

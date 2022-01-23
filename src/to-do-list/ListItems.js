@@ -12,13 +12,13 @@ function ListItems(props){
                 {props.toDos.length > 0 ? (
                     props.toDos.map((toDo) =>
                     <form className="list-items" key={toDo.id}>
-                        <Checkbox icon={<BsCheck className="svg" data-type="svg"/>} className="todo-checkbox" defaultChecked={toDo.completed} checked={props.completed[toDo.id].completed} onChange={ () => {
+                        <Checkbox icon={<BsCheck className="svg" data-type="svg"/>} className="todo-checkbox" aria-label="checkbox" defaultChecked={toDo.completed} checked={props.completed[toDo.id].completed} onChange={ () => {
                             props.handleCheck(toDo);
                             props.setCompleted({...props.completed, [toDo.id]: toDo.completed});
                         }}></Checkbox>
                         <span className="todo-item">{toDo.task}</span>
-                        <button className="edit-todo yellow-button" onClick={() => props.editToDo(toDo)}><BsPencil/></button>
-                        <button className="delete-todo red-button" onClick={() => props.deleteToDo(toDo.id)}><BsTrash/></button>
+                        <button className="edit-todo yellow-button" aria-label="edit" onClick={() => props.editToDo(toDo)}><BsPencil/></button>
+                        <button className="delete-todo red-button" aria-label="delete" onClick={() => props.deleteToDo(toDo.id)}><BsTrash/></button>
                     </form>
                     )
                 ) : <div className="empty-list">No tasks have been added.</div>}
