@@ -18,9 +18,9 @@ function EditToDo(props){
         <>
             <h2 className="edit-title">Edit Item</h2>
             <form className="edit-form" onSubmit={editButtonPressed}>
-                <input className="edit-input" type="text" value={toDo.task} onChange={handleInput}/>
-                <button className="blue-button edit-done" type="submit"><BsCheck/></button>
-                <button className="red-button edit-cancel" onClick={() => props.setEditing(false)}><BsX/></button>
+                <input className="edit-input" aria-label="edit to-do" type="text" value={toDo.task} onChange={handleInput}/>
+                <button className="blue-button edit-done" aria-label="edit" type="submit"><BsCheck/></button>
+                <button className="red-button edit-cancel" aria-label="cancel" onClick={() => props.setEditing(false)}><BsX/></button>
             </form>
         </>
     )
