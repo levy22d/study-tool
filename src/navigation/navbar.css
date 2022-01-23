@@ -1,8 +1,4 @@
-.nav-title{
-    color: white;
-    text-align: center;
-    font-weight: bold;
-}
+/*styles for the top navigation bar*/
 
 .nav-options{
     display: flex;
@@ -14,16 +10,12 @@
     z-index: 1;
 }
 
-.icon{
-    object-fit: contain;
+.nav-options > *{
+    flex: 1;
 }
 
 .nav-options > span{
     color: white;
-}
-
-.nav-options > *{
-    flex: 1;
 }
 
 .nav-item{
@@ -46,6 +38,16 @@
 .nav-item:active{
     background: #f0c3cb;
     color: #ec8fa0;
+}
+
+.icon{
+    object-fit: contain;
+}
+
+.nav-title{
+    color: white;
+    text-align: center;
+    font-weight: bold;
 }
 
 @media(max-width: 375px){
