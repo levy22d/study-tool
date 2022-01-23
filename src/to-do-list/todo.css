@@ -54,11 +54,8 @@ input[type="text"]{
     font-size: large;
 }
 
-.list-items {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 1em 0;
-    align-items: center;
+.todo-title{
+    margin: 0 0 1em 0;
 }
 
 .list-items-and-title {
@@ -66,8 +63,11 @@ input[type="text"]{
     width: 90%;
 }
 
-.todo-title{
-    margin: 0 0 1em 0;
+.list-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1em 0;
+    align-items: center;
 }
 
 .todo-item {
@@ -78,20 +78,6 @@ input[type="text"]{
 
 .todo-checkbox{
     flex: 1;
-}
-
-.red-button {
-    background-color: #FBB7C0;
-    color: #B6244F;
-  }
-  
-.red-button:hover {
-    background-color: #fd8c9b;
-}
-
-.red-button:active {
-    color: #FBB7C0;
-    background-color: #B6244F;
 }
 
 .blue-button {
@@ -122,12 +108,22 @@ input[type="text"]{
     background-color: #956f07;
 }
 
-.edit-todo, .delete-todo {
-    flex: 2;
+.red-button {
+    background-color: #FBB7C0;
+    color: #B6244F;
+  }
+  
+.red-button:hover {
+    background-color: #fd8c9b;
 }
 
-.empty-list{
-    text-align: center;
+.red-button:active {
+    color: #FBB7C0;
+    background-color: #B6244F;
+}
+
+.edit-todo, .delete-todo {
+    flex: 2;
 }
 
 .edit-form{
@@ -144,6 +140,10 @@ input[type="text"]{
 
 .edit-done, .edit-cancel{
     flex: 1;
+}
+
+.empty-list{
+    text-align: center;
 }
 
 @media(max-width: 375px){

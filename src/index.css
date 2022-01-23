@@ -34,7 +34,9 @@ input[type="text"]:focus{
   margin: 1.5em;
 }
 
+
 /*App.js styles*/
+
 #page-title{
   text-align: center;
   color: #99C24D;

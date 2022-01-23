@@ -1,7 +1,4 @@
-.timer-title{
-    padding: 2em 0 1em 0;
-    color: #617799;
-}
+/*styles for the timer section*/
 
 .timer{
     background-color: #dcdde7;
@@ -18,17 +15,33 @@
     margin: 0 auto;
 }
 
+.timer-title{
+    padding: 2em 0 1em 0;
+    color: #617799;
+}
+
+.change-time-buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.button-filler{
+    height: 35px;
+    margin: 0 .25em;
+    max-width: 50px;
+    min-width: 50px;
+}
+
+.timer-button:hover{
+    background-color: #c7c6c6;
+}
+
 .inc-buttons{
     grid-area: inc-button;
 }
 
 .dec-buttons{
     grid-area: dec-button;
-}
-
-.change-time-buttons{
-    display: flex;
-    justify-content: space-around;
 }
 
 .time{
@@ -45,31 +58,16 @@
     text-align: center;
 }
 
-.empty{
-    padding: 3rem;
-}
-
-.button-filler{
-    height: 35px;
-    margin: 0 .25em;
-    max-width: 50px;
-    min-width: 50px;
-}
-
-.timer-button:hover{
-    background-color: #c7c6c6;
+.timer-control{
+    min-width: 60px;
+    height: 40px;
+    font-size: 1.3em;
 }
 
 .control-buttons{
     display: flex;
     justify-content: center;
     padding: 3em;
-}
-
-.timer-control{
-    min-width: 60px;
-    height: 40px;
-    font-size: 1.3em;
 }
 
 .play-timer{
@@ -101,6 +99,10 @@
 
 .pause-timer:hover{
     background-color: #75AFFA;
+}
+
+.empty {
+    padding: 3rem;
 }
 
 .completed-timer{
