@@ -25,7 +25,7 @@ function Timer(){
             return () => clearInterval(intervalId);
         }
         
-    }, [timerStart, timeRemaining]);
+    }, [timerStart, timeRemaining, alert]);
 
     function PauseTimer(){
         setTimerStart(false);

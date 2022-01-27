@@ -17,8 +17,8 @@ function ListItems(props){
                             props.setCompleted({...props.completed, [toDo.id]: toDo.completed});
                         }}></Checkbox>
                         <span className="todo-item">{toDo.task}</span>
-                        <button className="edit-todo yellow-button" aria-label="edit" onClick={() => props.editToDo(toDo)}><BsPencil/></button>
-                        <button className="delete-todo red-button" aria-label="delete" onClick={() => props.deleteToDo(toDo.id)}><BsTrash/></button>
+                        <button className="edit-todo yellow-button" aria-label="edit" type="button" onClick={() => props.editToDo(toDo)}><BsPencil/></button>
+                        <button className="delete-todo red-button" aria-label="delete" type="button" onClick={() => props.deleteToDo(toDo.id)}><BsTrash/></button>
                     </form>
                     )
                 ) : <div className="empty-list">No tasks have been added.</div>}

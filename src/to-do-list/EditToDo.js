@@ -20,7 +20,7 @@ function EditToDo(props){
             <form className="edit-form" onSubmit={editButtonPressed}>
                 <input className="edit-input" aria-label="edit to-do" type="text" value={toDo.task} onChange={handleInput}/>
                 <button className="blue-button edit-done" aria-label="edit" type="submit"><BsCheck/></button>
-                <button className="red-button edit-cancel" aria-label="cancel" onClick={() => props.setEditing(false)}><BsX/></button>
+                <button className="red-button edit-cancel" aria-label="cancel" type="button" onClick={() => props.setEditing(false)}><BsX/></button>
             </form>
         </>
     )

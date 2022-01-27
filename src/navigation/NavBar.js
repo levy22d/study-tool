@@ -8,7 +8,7 @@ function NavBar(){
 
     return (
         <div className="nav-options">
-            <img src={icon} className="icon" height="20"/>
+            <img src={icon} alt="logo of a colorful book" className="icon" height="20"/>
             <span className="nav-title"><Link to="page-title" smooth="true" className="nav-item" offset={-90}>Study Tool</Link></span>
             <span><Link to="todo-list" className="nav-item" smooth="true" offset={-90}>To Do List</Link></span>
             <span><Link to="timer" className="nav-item" smooth="true" offset={-90}>Timer</Link></span>
