@@ -39,7 +39,7 @@ function ToDoList() {
   function deleteToDo(id){
     setToDos(toDos.filter((toDo) => toDo.id !== id));
     setEditing(false);
-    const {[id]: undefined, ...filteredValues} = completed;
+    const {[id]: empty, ...filteredValues} = completed;
     setCompleted(filteredValues);
   }
 
@@ -50,9 +50,6 @@ function ToDoList() {
   function editToDo(toDo){
     setEditing(true);
     setCurrentToDo({id: toDo.id, task: toDo.task, completed: toDo.completed});
-    // setCompleted({...completed, [toDo.id]: toDo.completed});
-    console.log(completed);
-    // console.log("please");
   }
 
   function updateToDo(id, updatedToDo){
