@@ -5,11 +5,18 @@ import EditToDo from './EditToDo';
 import './todo.css';
 
 function ToDoList() {
-  const listOfToDos = [
-    { id: 1, task: "go to the store and get milk", completed: false},
-    { id: 2, task: "finish homework", completed: true},
-    { id: 3, task: "go to bed", completed: false},
-  ]
+  const listOfToDos = []
+
+  for(let key in localStorage){
+    if(window.localStorage.getItem(key)){
+      const parsed = JSON.parse(window.localStorage.getItem(key))
+      console.log(parsed);
+      listOfToDos.push({id: +key, task: parsed.toDo, completed: parsed.completed});
+    }
+    
+  }
+
+  listOfToDos.sort(); //keeps list in the same general order...
 
   const [toDos, setToDos] = useState(listOfToDos);
 
@@ -22,6 +29,8 @@ function ToDoList() {
 
   function handleCheck(toDo){
     toDo.completed = !toDo.completed;
+    window.localStorage.setItem(toDo.id.toString(), JSON.stringify({toDo: toDo.task, completed: toDo.completed}));
+    // console.log(!toDo.completed);
     setToDos(toDos);
   }
   
@@ -34,6 +43,7 @@ function ToDoList() {
     }
     setToDos([...toDos, toDo]);
     setCompleted({...completed, [toDo.id]: toDo.completed});
+    window.localStorage.setItem(toDo.id.toString(), JSON.stringify({toDo: toDo.task, completed: toDo.completed}));
   }
 
   function deleteToDo(id){
@@ -41,6 +51,7 @@ function ToDoList() {
     setEditing(false);
     const {[id]: empty, ...filteredValues} = completed;
     setCompleted(filteredValues);
+    window.localStorage.removeItem(id);
   }
 
   const [editing, setEditing] = useState(false);
@@ -49,12 +60,13 @@ function ToDoList() {
 
   function editToDo(toDo){
     setEditing(true);
-    setCurrentToDo({id: toDo.id, task: toDo.task, completed: toDo.completed});
+    setCurrentToDo({id: toDo.id, task: toDo.task, completed: toDo.completed}); 
   }
 
   function updateToDo(id, updatedToDo){
     setEditing(false);
     setToDos(toDos.map((toDo) => toDo.id === id ? updatedToDo : toDo));
+    window.localStorage.setItem(id.toString(), JSON.stringify({toDo: updatedToDo.task, completed: updatedToDo.completed}));
   }
 
   return (
