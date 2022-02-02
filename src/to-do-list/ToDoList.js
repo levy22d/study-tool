@@ -9,8 +9,7 @@ function ToDoList() {
 
   for(let key in localStorage){
     if(window.localStorage.getItem(key)){
-      const parsed = JSON.parse(window.localStorage.getItem(key))
-      console.log(parsed);
+      const parsed = JSON.parse(window.localStorage.getItem(key));
       listOfToDos.push({id: +key, task: parsed.toDo, completed: parsed.completed});
     }
     
