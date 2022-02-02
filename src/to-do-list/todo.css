@@ -50,8 +50,9 @@ input[type="text"]{
     min-width: 40px;
     max-width: 40px;
     border-radius: 100%;
-    line-height: .5;
-    font-size: large;
+    text-align: center;
+    /* line-height: .5;
+    font-size: large; */
 }
 
 .todo-title{
