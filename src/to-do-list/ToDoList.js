@@ -16,7 +16,7 @@ function ToDoList() {
     
   }
 
-  listOfToDos.sort(); //keeps list in the same general order...
+  listOfToDos.sort((a, b) => a.id - b.id); //keeps list in the same general order (theoretically)
 
   const [toDos, setToDos] = useState(listOfToDos);
 
