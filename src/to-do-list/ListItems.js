@@ -6,6 +6,10 @@ import '@djthoms/pretty-checkbox';
 
 function ListItems(props){
 
+//displays the to do list items that were retrieved from local storage and
+//applies the appropriate checked/unchecked value.
+
+//displays "No tasks have been added" if the list is empty.
  return (
         <div className="list-items-and-title">
             <h2 className="todo-title">To Do</h2>

@@ -4,8 +4,11 @@ import { BsPlus } from 'react-icons/bs';
 function AddToDo(props){
     const initialValue = { id: null, task: '', completed: false};
     const [toDo, setToDo] = useState(initialValue);
+    
+    //setting toDo's values
     const handleInput = (event) => setToDo({ ...toDo, task: event.target.value })
 
+    //adding toDo using function from ToDoList
     function addButtonClicked(event){
         event.preventDefault();
         if(!toDo.task) return;

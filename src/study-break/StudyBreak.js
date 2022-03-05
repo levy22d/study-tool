@@ -12,10 +12,13 @@ function StudyBreak(){
     useEffect(() => {
         (async function fetchAnimals(){
             try{
+                //waiting for responses
                 const [catResponse, dogResponse] = await Promise.all([
                     fetch("https://aws.random.cat/meow"),
                     fetch("https://random.dog/woof.json")
                 ]);
+
+                //setting URLs
                 const catURL = await catResponse.json();
                 const dogURL = await dogResponse.json();
                 setImageURLs({ cat: catURL.file, dog: dogURL.url })
@@ -23,7 +26,7 @@ function StudyBreak(){
                 console.log(err);
             }
         })(); 
-    }, [newImagePressed.cat, newImagePressed.dog]);
+    }, [newImagePressed.cat, newImagePressed.dog]); //only run this if reload button was pressed
 
     const loadNewImages = () => {
         setNewImagePressed({cat: !newImagePressed.cat, dog: !newImagePressed.dog});

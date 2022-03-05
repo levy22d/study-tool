@@ -2,11 +2,14 @@ import React, {useState, useEffect} from 'react';
 import { BsCheck, BsX } from 'react-icons/bs';
 
 function EditToDo(props){
+
+    //keeping track of which toDo is being updated
     const [toDo, setToDo] = useState(props.currentToDo);
     const handleInput = (event) => {
         setToDo({ ...toDo, task: event.target.value })
     }
 
+    //using updateToDo from ToDoList to update toDo
     const editButtonPressed = (event) => {
         event.preventDefault();
         props.updateToDo(toDo.id, toDo);

@@ -9,6 +9,7 @@ function Timer(){
     const alert = useAlert();
 
     useEffect(() => {
+        //if time is up, stop the timer and let the user know
         if(timeRemaining < 0){ 
             setTimerStart(false);
             if(!timerStart){
@@ -17,11 +18,13 @@ function Timer(){
             return;
         }
 
+        //if timer is going, tick down the time
         if(timerStart){
             const intervalId = setInterval(() => {
                 setTimeRemaining(timeRemaining - 1);
             }, 1000)
-    
+            
+            //return the clean up function
             return () => clearInterval(intervalId);
         }
         
@@ -36,6 +39,7 @@ function Timer(){
         setTimerStart(false);
     }
     
+    //displaying hours, minutes, and seconds correctly
     let hours = Math.floor(timeRemaining / 3600);
     hours = hours >= 10 ? hours : "0" + hours;
     let minutes = Math.floor(timeRemaining / 60) % 60;
@@ -48,6 +52,7 @@ function Timer(){
             <h2 className="timer-title">Study Timer</h2>
 
             <div className={timeRemaining >= 0 ? "timer-display" : "completed-timer"}>
+                {/* Display buttons to increase hours, minutes, and seconds. */}
                 {!timerStart && timeRemaining >= 0 && 
                     (<div className="change-time-buttons inc-buttons">
                         <button className="timer-button inc-hour" aria-label="increase hours by one" onClick={() => setTimeRemaining(timeRemaining + 3600)}><BsArrowUp/></button>
@@ -55,12 +60,14 @@ function Timer(){
                         <button className="timer-button inc-sec" aria-label="increase seconds by one" onClick={() => setTimeRemaining(timeRemaining + 1)}><BsArrowUp/></button>
                     </div>)}
                     
+                {/* Display current time or a time's up button? */}
                 {timeRemaining >= 0 ? <div className="time"> <span>{hours}</span>:<span>{minutes}</span>:<span>{seconds}</span> </div>
                  : <>
                     <div className="times-up">Time's up!</div>
                     <button className="reset-timer timer-control" aria-label="reset timer" onClick={resetTimer}><BsArrowCounterclockwise/></button>
                  </>}
 
+                {/* Which decrease buttons to show? */}
                 {!timerStart &&
                     (<div className="change-time-buttons dec-buttons">
                     {timeRemaining >= 3600 ? 
@@ -74,6 +81,7 @@ function Timer(){
                         : <div className="empty"></div>}</div>)}
             </div>
             
+            {/* Which control buttons to show? */}
             {!timerStart && timeRemaining > 0 && 
                 <div className="control-buttons">
                     <button className="play-timer timer-control" aria-label="play timer" onClick={() => setTimerStart(true)}><BsPlay/></button>

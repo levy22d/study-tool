@@ -5,6 +5,8 @@ import EditToDo from './EditToDo';
 import './todo.css';
 
 function ToDoList() {
+
+  //retrieving items from localStorage
   const listOfToDos = []
 
   for(let key in localStorage){
@@ -19,20 +21,21 @@ function ToDoList() {
 
   const [toDos, setToDos] = useState(listOfToDos);
 
+  //setting which toDos were already completed when they were retrieved
   const initialCompleted = {}
   for(let i = 0; i < toDos.length; i++){
       initialCompleted[toDos[i].id] = toDos[i].completed;
   }
   const [completed, setCompleted] = useState(initialCompleted);
-  // console.log(completed);
 
+  //When something is checked off, it sets the completed property
   function handleCheck(toDo){
     toDo.completed = !toDo.completed;
     window.localStorage.setItem(toDo.id.toString(), JSON.stringify({toDo: toDo.task, completed: toDo.completed}));
-    // console.log(!toDo.completed);
     setToDos(toDos);
   }
   
+  //Handles adding a toDo
   function addToDo(toDo){
     const lastElement = toDos[toDos.length - 1];
     if(lastElement){
@@ -45,6 +48,7 @@ function ToDoList() {
     window.localStorage.setItem(toDo.id.toString(), JSON.stringify({toDo: toDo.task, completed: toDo.completed}));
   }
 
+  //Handles deleting toDos
   function deleteToDo(id){
     setToDos(toDos.filter((toDo) => toDo.id !== id));
     setEditing(false);
@@ -53,10 +57,12 @@ function ToDoList() {
     window.localStorage.removeItem(id);
   }
 
+  //Keeps track of whether we are in editing mode and which toDo is being edited
   const [editing, setEditing] = useState(false);
   const initialState = { id: null, task: '', completed: false};
   const [currentToDo, setCurrentToDo] = useState(initialState);
 
+  //Handles editing toDos
   function editToDo(toDo){
     setEditing(true);
     setCurrentToDo({id: toDo.id, task: toDo.task, completed: toDo.completed}); 
