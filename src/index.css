@@ -12,6 +12,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(254, 255, 250);
+  background-image: url("../src/images/study_icon_green_96.png");
 }
 
 button{
@@ -32,7 +33,15 @@ input[type="text"]:focus{
 }
 
 .app-section{
-  margin: 1.5em;
+  margin: 1.5em auto;
+  width: 70%
+}
+
+@media(max-width: 1440px){
+  .app-section{
+    margin: 1.5em auto;
+    width: 90%;
+  }
 }
 
 
