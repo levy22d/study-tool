@@ -32,6 +32,17 @@ input[type="text"]:focus{
     background-color: #fdffea;
 }
 
+/*App.js styles*/
+
+#page-title{
+  text-align: center;
+  color: #99C24D;
+  font-family: "Antic Slab", sans-serif;
+  font-size: 3em;
+  padding: 0 0 .7em 0;
+  border-bottom: dashed 2px #77973c;
+}
+
 .app-section{
   margin: 1.5em auto;
   width: 70%
@@ -42,18 +53,6 @@ input[type="text"]:focus{
     margin: 1.5em auto;
     width: 90%;
   }
-}
-
-
-/*App.js styles*/
-
-#page-title{
-  text-align: center;
-  color: #99C24D;
-  font-family: "Antic Slab", sans-serif;
-  font-size: 3em;
-  padding: 0 0 .7em 0;
-  border-bottom: dashed 2px #77973c;
 }
 
 @media(max-width: 375px){
