@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/study-tool/static/css/main.42c3fce6.chunk.css",
-    "main.js": "/study-tool/static/js/main.a715b52c.chunk.js",
-    "main.js.map": "/study-tool/static/js/main.a715b52c.chunk.js.map",
+    "main.css": "/study-tool/static/css/main.40e7e9ea.chunk.css",
+    "main.js": "/study-tool/static/js/main.4039dd63.chunk.js",
+    "main.js.map": "/study-tool/static/js/main.4039dd63.chunk.js.map",
     "runtime-main.js": "/study-tool/static/js/runtime-main.f23631a5.js",
     "runtime-main.js.map": "/study-tool/static/js/runtime-main.f23631a5.js.map",
     "static/css/2.5ca89f7f.chunk.css": "/study-tool/static/css/2.5ca89f7f.chunk.css",
@@ -10,7 +10,7 @@
     "static/js/2.e4fbc51e.chunk.js.map": "/study-tool/static/js/2.e4fbc51e.chunk.js.map",
     "index.html": "/study-tool/index.html",
     "static/css/2.5ca89f7f.chunk.css.map": "/study-tool/static/css/2.5ca89f7f.chunk.css.map",
-    "static/css/main.42c3fce6.chunk.css.map": "/study-tool/static/css/main.42c3fce6.chunk.css.map",
+    "static/css/main.40e7e9ea.chunk.css.map": "/study-tool/static/css/main.40e7e9ea.chunk.css.map",
     "static/js/2.e4fbc51e.chunk.js.LICENSE.txt": "/study-tool/static/js/2.e4fbc51e.chunk.js.LICENSE.txt",
     "static/media/IMG_0009.149d6868.JPG": "/study-tool/static/media/IMG_0009.149d6868.JPG",
     "static/media/dog.6bac9d41.jpg": "/study-tool/static/media/dog.6bac9d41.jpg",
@@ -20,7 +20,7 @@
     "static/js/runtime-main.f23631a5.js",
     "static/css/2.5ca89f7f.chunk.css",
     "static/js/2.e4fbc51e.chunk.js",
-    "static/css/main.42c3fce6.chunk.css",
-    "static/js/main.a715b52c.chunk.js"
+    "static/css/main.40e7e9ea.chunk.css",
+    "static/js/main.4039dd63.chunk.js"
   ]
 }
