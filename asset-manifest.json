@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/study-tool/static/css/main.40e7e9ea.chunk.css",
-    "main.js": "/study-tool/static/js/main.4039dd63.chunk.js",
-    "main.js.map": "/study-tool/static/js/main.4039dd63.chunk.js.map",
+    "main.js": "/study-tool/static/js/main.b7eb2d05.chunk.js",
+    "main.js.map": "/study-tool/static/js/main.b7eb2d05.chunk.js.map",
     "runtime-main.js": "/study-tool/static/js/runtime-main.f23631a5.js",
     "runtime-main.js.map": "/study-tool/static/js/runtime-main.f23631a5.js.map",
     "static/css/2.5ca89f7f.chunk.css": "/study-tool/static/css/2.5ca89f7f.chunk.css",
@@ -13,7 +13,7 @@
     "static/css/main.40e7e9ea.chunk.css.map": "/study-tool/static/css/main.40e7e9ea.chunk.css.map",
     "static/js/2.e4fbc51e.chunk.js.LICENSE.txt": "/study-tool/static/js/2.e4fbc51e.chunk.js.LICENSE.txt",
     "static/media/IMG_0009.149d6868.JPG": "/study-tool/static/media/IMG_0009.149d6868.JPG",
-    "static/media/dog.6bac9d41.jpg": "/study-tool/static/media/dog.6bac9d41.jpg",
+    "static/media/basil.333eef70.JPG": "/study-tool/static/media/basil.333eef70.JPG",
     "static/media/study_icon.96ab1355.png": "/study-tool/static/media/study_icon.96ab1355.png"
   },
   "entrypoints": [
@@ -21,6 +21,6 @@
     "static/css/2.5ca89f7f.chunk.css",
     "static/js/2.e4fbc51e.chunk.js",
     "static/css/main.40e7e9ea.chunk.css",
-    "static/js/main.4039dd63.chunk.js"
+    "static/js/main.b7eb2d05.chunk.js"
   ]
 }
